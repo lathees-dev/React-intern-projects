@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0px;
+}
+
+:root{
+    --primary-color : #ededed;
+    --secondary-color : #000000;
+}
+
+.light-theme{
+    --secondary-color : #ededed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 22px;
+    color: #ff6e30;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 2s;
+}
+
+.theme-icon{
+    width: 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 2px;
+}
+
+.bg-container {
+    background-color: var(--secondary-color);
+    background-size: cover;
+    /* height: 100vh; */
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heading {
+    color: #ff6e30;
+    font-family: 'Roboto';
+    font-size: 38px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.description {
+    color: #ff6e30;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+.pricing-plan-container {
+    width: 90%;
+    max-width: 1100px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2c353d;
+    border-radius: 16px;
+    padding: 20px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    align-self: flex-end;
+}
+
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 38px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.per-month {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+
+.plan-description {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.list-container {
+    padding-left: 24px;
+    flex-grow: 1;
+}
+
+.list-item {
+    color: #e2e8f0;
+    font-family: 'Roboto';
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.button {
+    color: #000000;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.selected-button {
+    color: #ffffff;
+    background-color: #ff6e30;
+}

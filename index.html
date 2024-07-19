@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="">Home</a>
+            <a href="">Plans</a>
+            <a href="">About Us</a>
+            <a href="">Contact</a>
+            <img class="theme-icon" src="sun.png" id="theme"/>
+        </nav>
+        
+    </header>
+    <!-- Main heading -->
+    <div class="bg-container" id="background">
+        <div class="pricing-plan-container">
+            <h1 class="heading">Pricing Plans</h1>
+            <p class="description">Every plan includes 30 day free trial</p>
+    <!--Card Section  -->
+            <div class="card-container">
+                <div class="card">
+                    <img class="icon" src="https://assets.ccbp.in/frontend/intermediate-rwd/personal-img.png" />
+                    <div class="price-container">
+                        <p class="price">$10.00/</p>
+                        <p class="per-month">per month</p>
+                    </div>
+                    <p class="plan-description">Perfect for when you want to
+                        host your blog or a hobby
+                        side project.</p>
+                    <ul class="list-container">
+                        <li class="list-item">2 Core Xeon CPU</li>
+                        <li class="list-item">1 GB RAM</li>
+                        <li class="list-item">30 GB SSD</li>
+                    </ul>
+                    <button class="button">Get Started Today</button>
+                </div>
+                <div class="card">
+
+                    <img class="icon" src="https://assets.ccbp.in/frontend/intermediate-rwd/business-img.png" />
+
+                    <div class="price-container">
+                        <h1 class="price">$80.00/</h1>
+                        <p class="per-month">per month</p>
+                    </div>
+                    <p class="plan-description">Perfect for hosting blogs with 
+                        lots of taffic or heavy 
+                        development projects.
+                        </p>
+                    <ul class="list-container">
+                        <li class="list-item">8 Core Xeon CPU</li>
+                        <li class="list-item">8 GB RAM</li>
+                        <li class="list-item">300 GB SSD</li>
+                        <li class="list-item">Unlimited Transfer</li>
+                    </ul>
+                    <button class="button selected-button">Get Started Today</button>
+                </div>
+                <div class="card">
+
+                    <img class="icon" src="https://assets.ccbp.in/frontend/intermediate-rwd/large-organisation-img.png" />
+
+                    <div class="price-container">
+                        <h1 class="price">$30.00/</h1>
+                        <p class="per-month">per month</p>
+                    </div>
+                    <p class="plan-description">Perfect for hosting
+                        production websites & API 
+                        services with high traffic
+                        load.</p>
+                    <ul class="list-container">
+                        <li class="list-item">4 Core Xeon CPU</li>
+                        <li class="list-item">2 GB RAM</li>
+                        <li class="list-item">100 GB SSD</li>
+                    </ul>
+                    <button class="button">Get Started Today</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var icon = document.getElementById('theme');
+    icon.onclick = function(){
+        document.body.classList.toggle("light-theme");
+        if (document.body.classList.contains("light-theme")){
+            icon.src = "moon.png"
+        }
+        else{
+            icon.src = "sun.png"
+        }
+    }
+</script>
+</body>
+</html>
