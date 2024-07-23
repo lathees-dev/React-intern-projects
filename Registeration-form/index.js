@@ -14,12 +14,13 @@ app.use(bodyParser.urlencoded({
 // Connection to Database
 
 
-mongoose.connect('mongodb+srv://lathees:lathees123@cluster0.8zpgkjv.mongodb.net/Hackathon', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://lathees:lathees123@cluster0.8zpgkjv.mongodb.net/Hackathon')
 var db = mongoose.connection
 db.on('error',()=>console.log("Error in connecting to database.."))
 db.once('open',()=> console.log('Connected to Database'))
 
 app.post("/register",(req,res)=>{
+    console.log(req.body);
 var fullname = req.body.fullname
 var username = req.body.username
 var email = req.body.email
@@ -37,7 +38,7 @@ db.collection('users').insertOne(data,(err,collection)=>{
     }
     console.log("Record Inserted Successfully..")
 })
-return res.redirect('success.html')
+return res.sendFile(__dirname + '/public/success.html');
 })
 
 
@@ -45,7 +46,7 @@ app.get('/',(req,res)=>{
     res.set({
         "Allow-access-Allow-Origin":'*'
     })
-    return res.redirect('index.html')
+    return res.sendFile(__dirname + '/public/register.html');
 }).listen(3000);
 
 console.log("Listening on port 3000");
